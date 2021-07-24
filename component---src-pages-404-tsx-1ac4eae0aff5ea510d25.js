@@ -1,0 +1,2 @@
+(self.webpackChunkvector_academy=self.webpackChunkvector_academy||[]).push([[218],{3205:function(e,n,t){"use strict";t.r(n);var a=t(7294);n.default=function(){return a.createElement("main",null,"Not found")}}}]);
+//# sourceMappingURL=component---src-pages-404-tsx-1ac4eae0aff5ea510d25.js.map
