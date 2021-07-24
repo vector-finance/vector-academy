@@ -7,8 +7,8 @@ const Container = styled.div`
   width: 100%;
   align-items: center;
   background: linear-gradient(
-    ${(props) => props.theme.color.primary},
-    ${(props) => props.theme.color.secondary}
+    ${(props) => props.theme.palette.primary},
+    ${(props) => props.theme.palette.secondary}
   );
   border-radius: 8px;
   min-height: 168px;
@@ -21,11 +21,20 @@ const Content = styled.div`
   color: white;
 `;
 
+const Subtitle = styled.div`
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 0.5rem;
+  color: white;
+`;
+
 const Banner: React.FC = () => (
   <Container>
     <Content>
       <h5>Welcome to Vector Academy</h5>
-      <Body1>Your end-to-end learning hub for all things Crypto and DeFi</Body1>
+      <Subtitle>
+        Your end-to-end learning hub for all things Crypto and DeFi
+      </Subtitle>
     </Content>
   </Container>
 );

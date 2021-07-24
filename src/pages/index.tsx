@@ -1,40 +1,32 @@
 import * as React from "react";
 import { PageProps, Link, graphql } from "gatsby";
-import { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 
+import { darkTheme, GlobalStyle, lightTheme } from "../styles/Theme";
 import Layout from "../components/layout";
-import GlobalStyle from "../styles/Global";
-import Theme from "../styles/Theme";
 import Banner from "../components/banner";
+import Nav from "../components/nav";
+import Toggle from "../components/toggle";
 
-import { Normalize } from "styled-normalize";
+const IndexPage: React.FC = () => {
+  const [isDarkMode, setDarkMode] = React.useState(false);
 
-type DataProps = {
-  site: {
-    buildTime: string;
-  };
+  return (
+    <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+      <GlobalStyle />
+      <Nav>
+        <Toggle
+          theme={isDarkMode}
+          toggleTheme={() => {
+            setDarkMode(!isDarkMode);
+          }}
+        />
+      </Nav>
+      <Layout>
+        <Banner />
+      </Layout>
+    </ThemeProvider>
+  );
 };
 
-const IndexPage: React.FC<PageProps<DataProps>> = ({
-  data,
-  path,
-  location,
-}) => (
-  <ThemeProvider theme={Theme}>
-    <Normalize />
-    <GlobalStyle />
-    <Layout>
-      <Banner />
-    </Layout>
-  </ThemeProvider>
-);
-
 export default IndexPage;
-
-export const query = graphql`
-  {
-    site {
-      buildTime(formatString: "YYYY-MM-DD hh:mm a z")
-    }
-  }
-`;

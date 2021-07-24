@@ -1,7 +1,8 @@
 import * as React from "react";
 import { Link, PageProps } from "gatsby";
+import { Normalize } from "styled-normalize";
 import styled from "styled-components";
-import Nav from "./nav";
+
 import Footer from "./Footer";
 
 const Container = styled.div`
@@ -13,12 +14,14 @@ const Container = styled.div`
   justify-content: center;
 `;
 
-const Layout: React.FC = ({ children }) => (
-  <Container>
-    <Nav />
-    {children}
-    <Footer />
-  </Container>
-);
+const Layout: React.FC = ({ children }) => {
+  return (
+    <Container>
+      <Normalize />
+      {children}
+      <Footer />
+    </Container>
+  );
+};
 
 export default Layout;
