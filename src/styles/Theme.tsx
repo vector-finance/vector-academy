@@ -22,6 +22,7 @@ const baseTheme = {
     secondary: colorPalette.secondary,
     secondary50: colorPalette.secondary50,
     gray300: colorPalette.gray300,
+    suface: colorPalette.surface,
   },
 };
 
@@ -29,26 +30,36 @@ export const darkTheme = {
   ...baseTheme,
   global: {
     background: "#121212",
+    bgPrimary: "#212121",
+    bgSecondary: "#121212",
     text: "#ffffff",
+    surface: "#424242",
   },
 };
 
 export const lightTheme = {
   ...baseTheme,
   global: {
-    background: "#ffffff",
+    background: "#E0E0E0",
+    bgPrimary: colorPalette.primary50,
+    bgSecondary: colorPalette.secondary50,
     text: "#000000",
+    surface: "#ffffff",
   },
 };
 
 export const GlobalStyle = createGlobalStyle`
-font-family: 'IBM Plex Sans', sans-serif;
-html body{
-  height: 100vh;
+html {
+  min-height: 100%;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: linear-gradient(
+    ${(props) => props.theme.global.bgPrimary},
+    ${(props) => props.theme.global.bgSecondary}
+  );
 }
 
 body {
-    background-color: ${(props) => props.theme.global.background};
+  height: 100%;
     color: ${(props) => props.theme.global.color};
 }
 

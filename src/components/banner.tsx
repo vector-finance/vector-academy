@@ -10,7 +10,7 @@ const Container = styled.div`
     ${(props) => props.theme.palette.primary},
     ${(props) => props.theme.palette.secondary}
   );
-  border-radius: 8px;
+  border-radius: 4px;
   min-height: 168px;
 `;
 
@@ -18,14 +18,28 @@ const Content = styled.div`
   max-width: 32em;
   margin: 32px;
   text-align: left;
-  color: white;
+  color: ${(props) => props.theme.palette.gray300};
+`;
+
+const Header = styled.div`
+  font-size: 25px;
+  font-weight: 400;
+  margin: 0;
+`;
+
+const Subtitle = styled.div`
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 0.5rem;
 `;
 
 const Banner: React.FC = () => (
   <Container>
     <Content>
-      <h5>Welcome to Vector Academy</h5>
-      <Body1>Your end-to-end learning hub for all things Crypto and DeFi</Body1>
+      <Header>Welcome to Vector Academy</Header>
+      <Subtitle>
+        Your end-to-end learning hub for all things Crypto and DeFi
+      </Subtitle>
     </Content>
   </Container>
 );

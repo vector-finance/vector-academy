@@ -15,7 +15,10 @@ const PostList = styled.ul`
 `;
 
 const PostItem = styled.article`
+  border-radius: 4px;
   margin-bottom: 40px;
+  padding: 24px;
+  background: ${(props) => props.theme.global.surface};
 
   p {
     margin-bottom: 0;
@@ -27,7 +30,6 @@ const PostItem = styled.article`
 `;
 
 const IndexPage: React.FC<PageProps> = ({ data, location }) => {
-  const [isDarkMode, setDarkMode] = React.useState(false);
   const siteTitle = data.site.siteMetadata?.title || `Title`;
   const posts = data.allMarkdownRemark.nodes;
 
@@ -67,11 +69,11 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
                 <li key={post.fields.slug}>
                   <PostItem itemScope itemType="http://schema.org/Article">
                     <header>
-                      <h2>
+                      <h4>
                         <Link to={post.fields.slug} itemProp="url">
                           <span itemProp="headline">{title}</span>
                         </Link>
-                      </h2>
+                      </h4>
                       <Caption>{post.frontmatter.date}</Caption>
                     </header>
                     <section>

@@ -7,6 +7,10 @@ import Body1 from "../components/body1";
 import Caption from "../components/caption";
 
 const Post = styled.article`
+  max-width: 1200px;
+  background: ${(props) => props.theme.global.surface};
+  border-radius: 4px;
+  padding: 16px;
   p {
     font-size: 16px;
   }
@@ -17,8 +21,15 @@ const Post = styled.article`
 `;
 
 const PostNav = styled.nav`
+  max-width: 1200px;
   ul {
     margin: 0;
+    li {
+      background: ${(props) => props.theme.global.surface};
+      border-radius: 4px;
+      padding: 16px;
+      margin: 24px;
+    }
   }
 `;
 
@@ -35,7 +46,7 @@ const BlogPostTemplate = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Post itemScope itemType="http://schema.org/Article">
         <header>
-          <h2 itemProp="headline">{post.frontmatter.title}</h2>
+          <h3 itemProp="headline">{post.frontmatter.title}</h3>
           <Caption>{post.frontmatter.date}</Caption>
         </header>
         <Hr />
@@ -55,17 +66,21 @@ const BlogPostTemplate = ({ data, location }) => {
           }}
         >
           <li>
-            {previous && (
+            {previous ? (
               <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
+            ) : (
+              <div>None</div>
             )}
           </li>
           <li>
-            {next && (
+            {next ? (
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
+            ) : (
+              <div>None</div>
             )}
           </li>
         </ul>

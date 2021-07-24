@@ -122,6 +122,13 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`IBM+Plex+Sans\:100,200,300,400,500,600,700`],
+        display: "swap",
+      },
+    },
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
