@@ -1,54 +1,42 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  <a href="https://vector.finanace">
+    <img alt="Vector" src="https://res.cloudinary.com/wet932/image/upload/v1627141901/ETC/VectorIcon.png" width="60" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby minimal starter
+  Vector Academy
 </h1>
 
-## 🚀 Quick start
+> Your end-to-end learning hub for all things Crypto and DeFi!
 
-1.  **Create a Gatsby site.**
+## Getting Start
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+<img src="https://img.shields.io/badge/Gatsby-663399?style=for-the-badge&logo=gatsby&logoColor=white" alt="Gatsby"/>
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+```
+npm install
 
-2.  **Start developing.**
+npm start
+```
 
-    Navigate into your new site’s directory and start it up.
+## Add Content
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+You can write...
 
-3.  **Open the code and start customizing!**
+- contents to blog in `content/blog` directory.
 
-    Your site is now running at http://localhost:8000!
+Content uses mark-down.
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+[Markdown Guide](https://www.markdownguide.org/)
 
-4.  **Learn more**
+## Our Channel
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+<a href="https://twitter.com/Vector__Finance">
+<img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter"/>
+</a>
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+<img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" onClick=""/>
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+<a href="https://discord.gg/aHBewbNQ">
+<img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"/>
+</a>

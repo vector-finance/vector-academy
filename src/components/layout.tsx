@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Link, PageProps } from "gatsby";
 import { Normalize } from "styled-normalize";
 import styled, { ThemeProvider } from "styled-components";
 import { darkTheme, GlobalStyle, lightTheme } from "../styles/Theme";
