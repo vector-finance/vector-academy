@@ -95,4 +95,17 @@ a {
       text-decoration: underline;
     }
   }
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+  list-style-position: outside;
+  list-style-image: none;
+
+  a {
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}
 `;
