@@ -5,7 +5,9 @@ import { ThemeProvider } from "styled-components";
 import Layout from "../components/layout";
 import GlobalStyle from "../styles/Global";
 import Theme from "../styles/Theme";
-import { IndexProps } from "../types";
+import Banner from "../components/banner";
+
+import { Normalize } from "styled-normalize";
 
 type DataProps = {
   site: {
@@ -19,10 +21,10 @@ const IndexPage: React.FC<PageProps<DataProps>> = ({
   location,
 }) => (
   <ThemeProvider theme={Theme}>
+    <Normalize />
     <GlobalStyle />
     <Layout>
-      <h1>hello</h1>
-      <h6>checkout</h6>
+      <Banner />
     </Layout>
   </ThemeProvider>
 );
