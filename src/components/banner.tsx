@@ -21,20 +21,11 @@ const Content = styled.div`
   color: white;
 `;
 
-const Subtitle = styled.div`
-  font-size: 16px;
-  font-weight: 400;
-  margin-top: 0.5rem;
-  color: white;
-`;
-
 const Banner: React.FC = () => (
   <Container>
     <Content>
       <h5>Welcome to Vector Academy</h5>
-      <Subtitle>
-        Your end-to-end learning hub for all things Crypto and DeFi
-      </Subtitle>
+      <Body1>Your end-to-end learning hub for all things Crypto and DeFi</Body1>
     </Content>
   </Container>
 );

@@ -8,6 +8,7 @@ const Container = styled.div`
   display: flex;
   margin: auto;
   max-width: 1200px;
+  width: 100%;
   padding-bottom: 0.75rem;
   position: relative;
 `;

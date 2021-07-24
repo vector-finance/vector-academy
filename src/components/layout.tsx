@@ -1,9 +1,12 @@
 import * as React from "react";
 import { Link, PageProps } from "gatsby";
 import { Normalize } from "styled-normalize";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import { darkTheme, GlobalStyle, lightTheme } from "../styles/Theme";
 
 import Footer from "./Footer";
+import Nav from "./nav";
+import Toggle from "./toggle";
 
 const Container = styled.div`
   margin: auto;
@@ -15,12 +18,24 @@ const Container = styled.div`
 `;
 
 const Layout: React.FC = ({ children }) => {
+  const [isDarkMode, setDarkMode] = React.useState(false);
   return (
-    <Container>
-      <Normalize />
-      {children}
-      <Footer />
-    </Container>
+    <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+      <GlobalStyle />
+      <Container>
+        <Nav>
+          <Toggle
+            theme={isDarkMode}
+            toggleTheme={() => {
+              setDarkMode(!isDarkMode);
+            }}
+          />
+        </Nav>
+        <Normalize />
+        {children}
+        <Footer />
+      </Container>
+    </ThemeProvider>
   );
 };
 

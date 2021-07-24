@@ -1,12 +1,9 @@
 import * as React from "react";
 import { PageProps, Link, graphql } from "gatsby";
-import styled, { ThemeProvider } from "styled-components";
+import styled from "styled-components";
 
-import { darkTheme, GlobalStyle, lightTheme } from "../styles/Theme";
 import Layout from "../components/layout";
 import Banner from "../components/banner";
-import Nav from "../components/nav";
-import Toggle from "../components/toggle";
 import Caption from "../components/caption";
 import Body1 from "../components/body1";
 
@@ -45,16 +42,7 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
   }
 
   return (
-    <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
-      <GlobalStyle />
-      <Nav>
-        <Toggle
-          theme={isDarkMode}
-          toggleTheme={() => {
-            setDarkMode(!isDarkMode);
-          }}
-        />
-      </Nav>
+    <>
       <Layout>
         <Banner />
         <PostList>
@@ -101,7 +89,7 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
           )}
         </PostList>
       </Layout>
-    </ThemeProvider>
+    </>
   );
 };
 

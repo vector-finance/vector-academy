@@ -21,6 +21,7 @@ const baseTheme = {
     primary50: colorPalette.primary50,
     secondary: colorPalette.secondary,
     secondary50: colorPalette.secondary50,
+    gray300: colorPalette.gray300,
   },
 };
 
@@ -55,36 +56,42 @@ h1 {
     font-size: 99px;
     font-weight: 300;
     margin: 0;
+    color: ${(props) => props.theme.global.text};
 }
 
 h2 {
     font-size: 62px;
     font-weight: 300;
     margin: 0;
+    color: ${(props) => props.theme.global.text};
 }
 
 h3 {
     font-size: 49px;
     font-weight: 400;
     margin: 0;
+    color: ${(props) => props.theme.global.text};
 }
 
 h4 {
     font-size: 35px;
     font-weight: 500;
     margin: 0;
+    color: ${(props) => props.theme.global.text};
 }
 
 h5 {
     font-size: 25px;
     font-weight: 400;
     margin: 0;
+    color: ${(props) => props.theme.global.text};
 }
 
 h6 {
     font-size: 21px;
     font-weight: 500;
     margin: 0;
+    color: ${(props) => props.theme.global.text};
 }
 
 a {
@@ -104,6 +111,7 @@ ul, ol {
 
   a {
     &:hover {
+      text-decoration: none;
       font-weight: bold;
     }
   }
