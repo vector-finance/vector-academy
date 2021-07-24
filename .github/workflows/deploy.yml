@@ -1,18 +1,26 @@
-name: Gatsby Publish
-
 on:
-  pull_request:
+  push:
     branches:
-      - dev
-
+      - gh-pages
+name: build gatsby
 jobs:
-  build:
+  build_gatsby:
+    name: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: enriikke/gatsby-gh-pages-action@v2
-        with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
-          deploy-branch: gh-pages
-          gatsby-args: --prefix-paths
-          skip-publish: true
+
+      - name: yarn install
+        run: yarn install
+
+      - name: gatsby build
+        env:
+          GH_API_KEY: ${{ secrets.ACCESS_TOKEN }}
+        run: yarn build
+
+      - name: deploy
+        uses: maxheld83/ghpages@v0.2.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          GH_PAT: ${{ secrets.ACCESS_TOKEN }}
+          BUILD_DIR: "public/"
