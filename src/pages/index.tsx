@@ -6,6 +6,7 @@ import Layout from "../components/layout";
 import Banner from "../components/banner";
 import Caption from "../components/caption";
 import Body1 from "../components/body1";
+import Seo from "../components/seo";
 
 const PostList = styled.ul`
   width: 100%;
@@ -35,6 +36,7 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
 
   if (posts.length == 0) {
     <Layout>
+      <Seo title="Vector Academy" />
       <p>
         No blog posts found. Add markdown posts to "content/blog" (or the
         directory you specified for the "gatsby-source-filesystem" plugin in
@@ -46,6 +48,7 @@ const IndexPage: React.FC<PageProps> = ({ data, location }) => {
   return (
     <>
       <Layout>
+        <Seo title="Vector Academy" />
         <Banner />
         <PostList>
           {posts.map(

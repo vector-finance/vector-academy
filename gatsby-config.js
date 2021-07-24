@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: "/vector-academy",
   siteMetadata: {
     siteUrl: "https://vector-finance.github.io//",
-    title: "vector-academy",
+    title: "Vector Academy",
   },
   plugins: [
     "gatsby-plugin-styled-components",

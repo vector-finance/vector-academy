@@ -122,8 +122,7 @@ ul, ol {
 
   a {
     &:hover {
-      text-decoration: none;
-      font-weight: bold;
+      text-decoration: underline;
     }
   }
 }

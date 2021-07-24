@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Layout from "../components/layout";
 import Body1 from "../components/body1";
 import Caption from "../components/caption";
+import Seo from "../components/seo";
 
 const Post = styled.article`
   max-width: 1200px;
@@ -44,6 +45,10 @@ const BlogPostTemplate = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
+      <Seo
+        title={post.frontmatter.title}
+        description={post.frontmatter.description || post.excerpt}
+      />
       <Post itemScope itemType="http://schema.org/Article">
         <header>
           <h3 itemProp="headline">{post.frontmatter.title}</h3>
