@@ -1,6 +1,7 @@
 module.exports = {
+  pathPrefix: "/vector-academy",
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://vector-finance.github.io//",
     title: "vector-academy",
   },
   plugins: [
