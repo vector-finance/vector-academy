@@ -1,0 +1,1 @@
+(self.webpackChunkvector_academy=self.webpackChunkvector_academy||[]).push([[989],{4870:function(){}}]);
