@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import Body2 from "./Body2";
+import Body2 from "./body2";
 
 const Container = styled.footer`
   display: flex;

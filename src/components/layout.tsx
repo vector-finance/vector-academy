@@ -1,9 +1,9 @@
 import * as React from "react";
 import { Normalize } from "styled-normalize";
 import styled, { ThemeProvider } from "styled-components";
-import { darkTheme, GlobalStyle, lightTheme } from "../styles/Theme";
+import { darkTheme, GlobalStyle, lightTheme } from "../styles/theme";
 
-import Footer from "./Footer";
+import Footer from "./footer";
 import Nav from "./nav";
 import Toggle from "./toggle";
 
