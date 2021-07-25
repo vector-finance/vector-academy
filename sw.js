@@ -27,27 +27,35 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-615622f74f042dd18044.js"
+    "url": "webpack-runtime-b4c35ab1f8da1e3ddd05.js"
   },
   {
     "url": "framework-3877807025551b5d167a.js"
   },
   {
-    "url": "app-b7fcd3ac930d12483a6e.js"
+    "url": "app-9f18c632e4ecf26df070.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "ffbdcfa0afcfe287bd93532d47f164e9"
+    "revision": "d009b30f9ddb1410169d062be18006cb"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-c83c7ce04c4091ab9040.js"
+  },
+  {
+    "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
+    "revision": "f6081b83111aea4128c98944b7fafccc"
+  },
+  {
+    "url": "page-data/app-data.json",
+    "revision": "448d06e9d5640be247eb18709cd742ed"
   },
   {
     "url": "polyfill-73015caa91edf33a66a3.js"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "22851cce085e29f939cea0fbfcfe1958"
+    "revision": "880e45ac224f52aade94d3f287f47444"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -134,12 +142,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/vector-academy`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-b7fcd3ac930d12483a6e.js`))) {
+  if (!resources || !(await caches.match(`/vector-academy/app-9f18c632e4ecf26df070.js`))) {
     return await fetch(event.request)
   }
 
@@ -152,7 +160,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/vector-academy/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
