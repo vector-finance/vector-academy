@@ -9,6 +9,7 @@ import Toggle from "./toggle";
 
 const Container = styled.div`
   margin: auto;
+  padding: 8px;
   max-width: 1200px;
   display: flex;
   flex-direction: column;
