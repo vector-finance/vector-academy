@@ -5,7 +5,7 @@ module.exports = {
     title: "Vector Academy",
   },
   plugins: [
-    "gatsby-plugin-styled-components",
+    "gatsby-plugin-scss",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",

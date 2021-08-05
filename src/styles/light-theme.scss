@@ -1,0 +1,32 @@
+body.light {
+  background-color: #e0e0e0;
+
+  // home
+  .home-header {
+    color: #000;
+  }
+
+  .category-container {
+    border-top: 1px solid #ecf0f2;
+    border-bottom: 1px solid #ecf0f2;
+    border-right: 6px solid #ecf0f2;
+    border-left: 6px solid #ecf0f2;
+    background-color: #e0e0e0;
+    .item {
+      border: 1px solid #ecf0f2;
+      background-color: #e0e0e0;
+      -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+      a {
+        color: #666;
+      }
+      &[aria-selected='true'] {
+        border: 2px solid #666;
+        font-weight: bolder;
+      }
+      &[aria-selected='true'] a {
+        color: #666;
+      }
+    }
+  }
+}
